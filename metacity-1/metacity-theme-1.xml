@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-  <name>Windows 10 Theme</name>
+  <name>Unity8</name>
   <author>Elbullazul</author>
   <copyright>2015 Elbullazul</copyright>
   <date>Sept 9, 2015</date>
-  <description>Windows 10 window border for Windows 10 Theme</description>
+  <description>Unity8 window border for Windows 10 Theme</description>
 </info>
 
 <constant name="IconTitleSpacing" value="0"/>
@@ -129,7 +129,7 @@
 
 <!-- CLOSE BUTTON -->
 <draw_ops name="button-close-focused">
-  <rectangle color="#1f1f1f" x="0" y="0" width="width" height="height" filled="true"/>
+  <rectangle color="#000000" x="0" y="0" width="width" height="height" filled="true"/>
   <image filename="close-focused-normal.png" x="0" y="0" width="width" height="height"/>
 </draw_ops>
 
@@ -142,13 +142,12 @@
 </draw_ops>
 
 <draw_ops name="button-close-pressed">
-  <rectangle color="#ff0000" x="0" y="0" width="width" height="height" filled="true"/>
+  <rectangle color="#f1f1f1" x="0" y="0" width="width" height="height" filled="true"/>
   <image filename="close-focused-normal.png" x="0" y="0" width="width" height="height"/>
 </draw_ops>
 
 <!-- MAXIMIZE BUTTON -->
 <draw_ops name="button-maximize-focused">
-  <rectangle color="#1f1f1f" x="0" y="0" width="width" height="height" filled="true"/>
   <image filename="maximize-focused-normal.png" x="0" y="0" width="width" height="height"/>
 </draw_ops>
 
@@ -161,13 +160,11 @@
 </draw_ops>
 
 <draw_ops name="button-maximize-pressed">
-  <rectangle color="#3f3f3f" x="0" y="0" width="width" height="height" filled="true"/>
   <image filename="maximize-focused-normal.png" x="0"  y="0" width="width" height="height"/>
 </draw_ops>
 
 <!-- RESTORE BUTTON -->
 <draw_ops name="button-restore-focused">
-  <rectangle color="#1f1f1f" x="0" y="0" width="width" height="height" filled="true"/>
   <image filename="maximize-focused-normal.png" x="0" y="0" width="width" height="height"/>
 </draw_ops>
 
@@ -180,13 +177,11 @@
 </draw_ops>
 
 <draw_ops name="button-restore-pressed">
-  <rectangle color="#3f3f3f" x="0" y="0" width="width" height="height" filled="true"/>
   <image filename="maximize-focused-normal.png" x="0"  y="0" width="width" height="height"/>
 </draw_ops>
 
 <!-- MINIMIZE BUTTON -->
 <draw_ops name="button-minimize-focused">
-  <rectangle color="#1f1f1f" x="0" y="0" width="width" height="height" filled="true"/>
   <image filename="minimize-focused-normal.png" x="0" y="0" width="width" height="height"/>
 </draw_ops>
 
@@ -199,7 +194,6 @@
 </draw_ops>
 
 <draw_ops name="button-minimize-pressed">
-  <rectangle color="#3f3f3f" x="0" y="0" width="width" height="height" filled="true"/>
   <image filename="minimize-focused-normal.png" x="0" y="0" width="width" height="height"/>
 </draw_ops>
 

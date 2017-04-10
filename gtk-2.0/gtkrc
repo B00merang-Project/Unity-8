@@ -1,6 +1,6 @@
 # Numix GTK Theme
 
-gtk-color-scheme = "bg_color:#ECEDEF\nfg_color:#000000\nbase_color:#f9f9f9\ntext_color:#333333\nselected_bg_color:#DB6823\nselected_fg_color:#f9f9f9\ntooltip_bg_color:#2d2d2d\ntooltip_fg_color:#dedede\ntitlebar_bg_color:#000000\ntitlebar_fg_color:#dcdcdc\nmenubar_bg_color:#000000\nmenubar_fg_color:#f9f9f9\ntoolbar_bg_color:#dedede\ntoolbar_fg_color:#555555\nmenu_bg_color:#000000\nmenu_fg_color:#f9f9f9\npanel_bg_color:#2d2d2d\npanel_fg_color:#dcdcdc\nlink_color:#FF873F"
+gtk-color-scheme = "bg_color:#ECEDEF\nfg_color:#000000\nbase_color:#f9f9f9\ntext_color:#333333\nselected_bg_color:#de4815\nselected_fg_color:#f9f9f9\ntooltip_bg_color:#2d2d2d\ntooltip_fg_color:#dedede\ntitlebar_bg_color:#000000\ntitlebar_fg_color:#dcdcdc\nmenubar_bg_color:#000000\nmenubar_fg_color:#f9f9f9\ntoolbar_bg_color:#dedede\ntoolbar_fg_color:#555555\nmenu_bg_color:#000000\nmenu_fg_color:#f9f9f9\npanel_bg_color:#2d2d2d\npanel_fg_color:#dcdcdc\nlink_color:#FF873F"
 
 # Default Style
 
@@ -470,7 +470,7 @@ class "PanelToplevel*" style "murrine-panel"
 widget_class "*PanelToplevel*" style "murrine-panel"
 widget_class "*notif*" style "murrine-panel"
 widget_class "*Notif*" style "murrine-panel"
-widget_class "*Tray*" style "murrine-panel" 
+widget_class "*Tray*" style "murrine-panel"
 widget_class "*tray*" style "murrine-panel"
 widget_class "*computertemp*" style "murrine-panel"
 widget_class "*Applet*Tomboy*" style "murrine-panel"

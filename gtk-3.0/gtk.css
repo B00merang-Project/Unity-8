@@ -8,6 +8,10 @@
 @define-color tooltip_bg_color #000000;
 @define-color tooltip_fg_color #eeeeee;
 
+/* sidebar colors */
+@define-color sidebar_bg_color @bg_color;
+@define-color sidebar_fg_color @fg_color;
+
 /* dark color scheme */
 @define-color dark_bg_color #000000;
 @define-color dark_fg_color #eeeeee;
