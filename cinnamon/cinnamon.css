@@ -283,7 +283,7 @@ StScrollBar StButton#hhandle {
     background-gradient-direction: none;
 }
 .popup-menu-item:active {
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.5);
     color: black;
 }
 .popup-menu-item:insensitive {
@@ -390,12 +390,12 @@ StScrollBar StButton#hhandle {
 
 #panelLeft.vertical .applet-box:first-child{
     background-color: #de4815;
-	background-image: url("unity.png");
-	transition-duration: 300;
+    background-image: url("unity.png");
+    transition-duration: 300;
     background-size: cover;
     width: 35px;
     height: 40px;
-	color: rgba(255,0,0,0) !important;
+    color: rgba(255,0,0,0) !important;
 }
 
 #panelLeft:dnd {
