@@ -1502,21 +1502,17 @@ GtkLevelBar.vertical {
     margin: 0 7px;
 }
 
+.scale.highlight,
 .menuitem .scale.highlight.left,
 .scale.highlight.left {
-    border-color: @theme_selected_bg_color;
-    background-color: @theme_selected_bg_color;
+    border-color: #19b6ee;
+    background-color: #19b6ee;
     background-image: none;
 }
 
-.menuitem .scale.highlight.left:hover {
-    border-color: shade(@theme_selected_bg_color, 0.8);
-    background-color: shade(@theme_selected_bg_color, 0.8);
-}
-
 .scale.highlight.bottom {
-    border-color: @theme_selected_bg_color;
-    background-color: @theme_selected_bg_color;
+    border-color: #19b6ee;
+    background-color: #19b6ee;
     background-image: none;
 }
 
