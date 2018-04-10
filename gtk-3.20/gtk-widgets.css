@@ -1,41 +1,12 @@
 
 * {
-    -GtkArrow-arrow-scaling: 0.5;
-    -GtkButton-child-displacement-x: 0;
-    -GtkButton-child-displacement-y: 0;
-    -GtkButton-default-border: 0;
-    -GtkButton-image-spacing: 0;
-    -GtkButton-inner-border: 1;
-    -GtkButton-interior-focus: true;
-    -GtkButtonBox-child-min-height: 24;
-    -GtkButtonBox-child-internal-pad-y: 1;
-
-    -GtkCheckButton-indicator-size: 16;
-    -GtkCheckMenuItem-indicator-size: 14;
-
-    -GtkExpander-expander-size: 8;
-    -GtkHTML-link-color: @link_color;
-    -GtkIMHtml-hyperlink-color: @link_color;
-    -GtkPaned-handle-size: 4;
-    -GtkProgressBar-min-horizontal-bar-height: 12;
-    -GtkProgressBar-min-vertical-bar-width: 12;
-    -GtkRange-slider-width: 4;
-    -GtkRange-stepper-spacing: 0;
-    -GtkRange-trough-border: 0;
-    -GtkRange-trough-under-steppers: 1;
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
-    -GtkScrollbar-min-slider-length: 80;
-    -GtkScrolledWindow-scrollbar-spacing: 0;
-    -GtkScrolledWindow-scrollbars-within-bevel: 1;
-    -GtkStatusbar-shadow-type: none;
-    -GtkTextView-error-underline-color: @error_color;
-    -GtkToolButton-icon-spacing: 6;
-    -GtkToolItemGroup-expander-size: 8;
-    -GtkTreeView-expander-size: 8;
-    -GtkWindow-resize-grip-height: 0;
-    -GtkWindow-resize-grip-width: 0;
-    -WnckTasklist-fade-overlay-rect: 0;
+    -GtkScrolledwindow-scrollbar-spacing: 0;
+    -GtkScrolledwindow-scrollbars-within-bevel: 1;
+    -textview-error-underline-color: @error_color;
+    -GtkToolbutton-icon-spacing: 6;
+    -GtkTreeview-expander-size: 8;
 
     background-clip: padding-box;
 
@@ -294,9 +265,7 @@ row { padding: 4px;
 row:selected,
 row:selected:hover,
 row:selected:focus {
-    border-width: 1px 0;
-    border-style: solid;
-    border-color: shade(@theme_selected_bg_color, 0.9);
+    border: none;
     background-color: @theme_selected_bg_color;
     background-image: none;
     color: @theme_selected_fg_color;
@@ -563,6 +532,14 @@ entry progress {
     color: @theme_selected_fg_color;
 }
 
+entry entry {
+    border-style: solid;
+    box-shadow: none;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+}
+
 /************
  * expander *
  ************/
@@ -613,15 +590,17 @@ list-row:selected {
 /*********
  * frame *
  *********/
-frame {
+frame > border {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0;
 }
 
-statusbar frame {
-    border-width: 0;
+frame.flat > border,
+frame > border.flat,
+statusbar frame > border {
+    border: none;
 }
 
 /*******************
@@ -962,9 +941,6 @@ image:disabled {
 }
 
 .floating-bar button {
-    -GtkButton-image-spacing: 0;
-    -GtkButton-inner-border: 0;
-
     border-style: none;
     background-color: transparent;
     background-image: none;
@@ -1057,10 +1033,18 @@ menu button {
     font: initial;
 }
 
-/* ubuntu software center menu */
-#toolbar-popup {
-    background-color: @menu_bg_color;
-    color: @menu_fg_color;
+menu > arrow.top,
+.menu > arrow.top {
+    margin-top: -3px;
+    border-bottom: 1px solid shade(@theme_bg_color, 0.9);
+    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+
+menu > arrow.bottom,
+.menu > arrow.bottom {
+    margin-bottom: -3px;
+    border-top: 1px solid shade(@theme_bg_color, 0.9);
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
 /***********
@@ -1079,7 +1063,6 @@ menubar:backdrop {
 /***************
  * menubaritem *
  ***************/
-menubar menuitem,
 menubar > menuitem {
     padding: 3px 5px;
     border-width: 0;
@@ -1090,7 +1073,6 @@ menubar > menuitem {
     color: @menubar_fg_color;
 }
 
-menubar menuitem:hover,
 menubar > menuitem:hover {
     border-color: mix(@menubar_bg_color, @menubar_fg_color, 0.21);
     background-color: mix(@menubar_bg_color, @menubar_fg_color, 0.21);
@@ -1098,7 +1080,6 @@ menubar > menuitem:hover {
     color: shade(@menubar_fg_color, 1.08);
 }
 
-menubar menuitem *:hover,
 menubar > menuitem *:hover {
     color: shade(@menubar_fg_color, 1.08);
 }
@@ -1113,7 +1094,6 @@ treemenu menuitem {
 
 menu menuitem,
 menu > menuitem {
-    -GtkMenuItem-arrow-scaling: 0.5;
     padding: 3px 3px;
     border-width: 0;
     border-style: solid;
@@ -2996,8 +2976,6 @@ tooltip * {
  * treeview *
  ************/
 treeview {
-    -treeview-vertical-separator: 0;
-    -GtkWidget-focus-line-width: 1;
 }
 
 treeview.dnd {
@@ -3118,6 +3096,10 @@ button.file image:last-child {
     background-color: @theme_base_color;
     background-image: none;
     color: @theme_text_color;
+}
+
+.app-notification border {
+    border: none;
 }
 
 /*******
@@ -3611,7 +3593,7 @@ GtkBubbleWindow toolbar {
     border-style: none;
     background: none;
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 .titlebar .titlebutton:hover,
@@ -3630,7 +3612,7 @@ GtkBubbleWindow toolbar {
 .titlebar .titlebutton:backdrop {
     background-image: none;
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.4);
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 decoration {
