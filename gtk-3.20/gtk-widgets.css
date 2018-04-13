@@ -1981,6 +1981,7 @@ switch {
     background-image: none;
     color: @theme_fg_color;
     font-size: 0;
+    margin: 4px;
     border-radius: 6px;
 }
 
