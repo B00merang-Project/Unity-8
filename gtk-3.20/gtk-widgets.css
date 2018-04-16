@@ -1149,6 +1149,8 @@ menuitem radio,
 menuitem radio:hover,
 menuitem radio:disabled {
     border-style: none;
+    min-width: 16px;
+    min-height: 16px;
     background-color: transparent;
     background-image: none;
 }
