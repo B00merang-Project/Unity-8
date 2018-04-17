@@ -603,6 +603,10 @@ statusbar frame > border {
     border: none;
 }
 
+.frame {
+	background: none;
+}
+
 /*******************
  * scrolled window *
  *******************/
@@ -1291,8 +1295,8 @@ notebook {
     background-image: none;
     border-radius: 0;
     padding: 0;
-    border-color: shade (@theme_bg_color, 0.82);
-    border-width: 1px;
+    border-color: shade(@theme_bg_color, 0.82);
+    border-width: 0;
     border-style: solid;
 }
 
@@ -1369,7 +1373,7 @@ notebook tab button {
 }
 
 notebook drawingarea {
-    background-color: shade (@bg_color, 1.02);
+    background-color: shade(@bg_color, 1.02);
 }
 
 notebook > frame {
@@ -2967,17 +2971,28 @@ headerbar .linked button:disabled:only-child {
  * tooltip *
  ***********/
 tooltip {
-    border-width: 1px;
-    border-style: solid;
-    border-color: shade(@theme_tooltip_bg_color, 0.8);
     border-radius: 8px;
+    box-shadow: none;
+}
+
+tooltip.background {
+    border: 1px solid shade(@tooltip_bg_color, 0.8);
     background-color: @tooltip_bg_color;
-    background-image: none;
-    color: @tooltip_fg_color;
+    background-clip: padding-box;
+}
+
+tooltip.background label {
+    padding: 1px;
+}
+
+tooltip decoration {
+    border-radius: 8px;
+    background-color: transparent;
 }
 
 tooltip * {
     background-color: transparent;
+    color: @tooltip_fg_color;
 }
 
 /************
