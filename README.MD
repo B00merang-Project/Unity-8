@@ -1,8 +1,8 @@
 # Unity 8 theme
 
-Theme which aims to recreate the lost appearance of the Unity 8 DE, which Canonical has abandoned
+Theme which aims to recreate the desktop appearance of Unity 8
 
-![unity8](https://github.com/B00merang-Project/Unity8/blob/master/screenshot.png?raw=true)
+![unity8](https://github.com/B00merang-Project/gallery/raw/master/Unity%208%20(3).png)
 
 **Maintainer :** [Elbullazul](https://github.com/Elbullazul)
 
@@ -10,8 +10,17 @@ Theme which aims to recreate the lost appearance of the Unity 8 DE, which Canoni
 
 **License :** GPL v3
 
-**More info :** http://b00merang.weebly.com/ios-10.html
+**More info :** http://b00merang.weebly.com/unity-8.html
 
-***
+### Manual installation
 
-> Installation instructions : http://b00merang.weebly.com/easy-installation-guide.html
+Extract the zip file to the themes directory i.e. `/home/USERNAME/.themes`
+
+### Requirements
+
+- GTK+ 3.20 or above
+- Murrine and Pixmap theme engines
+
+### Contribute
+
+Contact us @ http://b00merang.weebly.com/contact.html
