@@ -1005,6 +1005,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   height: 30px;
 }
 
+#panel.solid {
+
+}
+
 #panel:overview, #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
   background-color: rgba(24, 24, 24, 0.75);
 }
@@ -1139,7 +1143,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel .clock-display StBoxLayout:last-child > StLabel:last-child {
-  color: #E95420;
+  color: #FFFFFF;
 }
 
 #panel .popup-menu-arrow {
