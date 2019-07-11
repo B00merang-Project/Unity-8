@@ -7,7 +7,7 @@ gtk-color-scheme	= "bg_color:#ecedef"
 gtk-color-scheme	= "fg_color:#000000"
 gtk-color-scheme	= "base_color:#f9f9f9" # Background, base.
 gtk-color-scheme	= "text_color:#000000" # Foreground, text.
-gtk-color-scheme	= "selected_bg_color:#de4815"
+gtk-color-scheme	= "selected_bg_color:#D44D1F"
 gtk-color-scheme	= "selected_fg_color:#FFFFFF"
 gtk-color-scheme	= "tooltip_bg_color:#111111"
 gtk-color-scheme	= "tooltip_fg_color:#000000" # Tooltips.
@@ -108,8 +108,8 @@ style "default"
 
 	base[NORMAL]      = @base_color
 	base[PRELIGHT]    = shade (0.95, @bg_color)
-	base[ACTIVE]      = shade (0.92, @selected_bg_color)
-	base[SELECTED]    = shade (0.93, @selected_bg_color)
+	base[ACTIVE]      = @selected_bg_color
+	base[SELECTED]    = @selected_bg_color
 	base[INSENSITIVE] = @bg_color
 
 	text[NORMAL]      = @text_color
@@ -465,7 +465,7 @@ style "vscrollbar" {
 
 style "overlay-scrollbar"
 {
-	bg[SELECTED] = shade (1.0, @selected_bg_color)
+	bg[SELECTED] = shade (0.9, @bg_color)
 	bg[INSENSITIVE] = shade (0.85, @bg_color)
 	bg[ACTIVE] = shade (0.6, @bg_color)
 }
@@ -543,7 +543,7 @@ style "radio"
 	bg[ACTIVE]	= shade (0.85, @bg_color)
 	bg[SELECTED]	= @base_color
 	bg[INSENSITIVE]	= shade (0.95, @bg_color)
-	text[PRELIGHT]	= shade (0.8, @selected_bg_color)
+	text[PRELIGHT]	= @selected_bg_color
 	fg[ACTIVE]	= @fg_color
 	fg[INSENSITIVE] = mix (0.4, @fg_color, @bg_color)
 
