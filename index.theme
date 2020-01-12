@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Unity8
-Comment=Unity8 theme for Linux OSes; based on the MTAC architecture
-Comment=Author : Christian Medel (Elbullazul)
-Version=rolling
+Name=Unity 8
+Comment=A GTK theme based on Ubuntu 16.04 Unity 8 desktop
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Unity8
-MetacityTheme=Unity8
-ButtonLayout=:minimize,maximize,close
+GtkTheme=Unity 8
+MetacityTheme=Unity 8
+IconTheme=Suru
+CursorTheme=DMZ-Black
+ButtonLayout=close,minimize,maximize:
