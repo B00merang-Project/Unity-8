@@ -81,16 +81,17 @@ label > selection {
   color: #F9F9F9;
   background-color: #19B6EE; }
   label > selection:focus-within {
-    color: #19B6EE; }
+    color: #F9F9F9;
+    background-color: #19B6EE; }
 
 label:disabled {
   color: #7e8f94; }
   button label:disabled {
     color: inherit; }
   > selection label:disabled {
-    color: #a96e5a; }
+    color: #4ba3c1; }
     > selection label:disabled:backdrop {
-      color: #46575c; }
+      color: #4ba3c1; }
 
 label.error {
   color: #ED3146; }
@@ -574,7 +575,7 @@ searchbar {
   border-width: 0 0 1px 0;
   border-style: solid;
   border-color: #2d4c54;
-  background-color: #0D303A; }
+  background-color: #0d2d36; }
 
 .nautilus-window .searchbar-container {
   margin-top: -1px; }
@@ -954,21 +955,20 @@ menubar, .menubar {
   menubar:backdrop, .menubar:backdrop {
     color: #abb5b8;
     background-color: #0D303A; }
-
-menubar > menuitem, .menubar > menuitem {
-  padding: 3px 5px;
-  border: none;
-  color: #EEEEEE;
-  background-color: transparent; }
-  menubar > menuitem:hover, .menubar > menuitem:hover {
-    color: #F9F9F9;
-    background-color: #D44D1F; }
-  menubar > menuitem:disabled, .menubar > menuitem:disabled {
-    color: #7e8f94;
+  menubar > menuitem, .menubar > menuitem {
+    padding: 3px 5px;
+    border: none;
+    color: #EEEEEE;
     background-color: transparent; }
-  menubar > menuitem:backdrop, .menubar > menuitem:backdrop {
-    color: #abb5b8;
-    background-color: transparent; }
+    menubar > menuitem:hover, .menubar > menuitem:hover {
+      color: #F9F9F9;
+      background-color: #D44D1F; }
+    menubar > menuitem:disabled, .menubar > menuitem:disabled {
+      color: #7e8f94;
+      background-color: transparent; }
+    menubar > menuitem:backdrop, .menubar > menuitem:backdrop {
+      color: #abb5b8;
+      background-color: transparent; }
 
 notebook {
   padding: 0; }
@@ -1451,8 +1451,7 @@ window.dialog.print drawing {
 window.dialog.print .dialog-action-box {
   margin: 12px; }
 
-frame,
-.frame {
+frame, .frame {
   border: 1px solid #2d4c54; }
 
 frame {
