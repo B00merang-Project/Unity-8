@@ -11,6 +11,7 @@ Theme which aims to recreate the desktop appearance of Unity 8
 - No shell-scpecitifc theme (yet)
 - Cinnamon
 - Gnome
+- MATE
 
 ### Manual installation
 Go to releases, download the latest `.zip` file and extract it to the themes directory i.e. `/home/USERNAME/.themes`
