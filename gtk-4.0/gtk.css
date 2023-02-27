@@ -229,15 +229,15 @@ window.aboutdialog image.large-icons {
 
 .osd button, button.osd {
   padding: 4px 8px;
-  border-style: solid;
-  border-width: 1px;
   border-radius: 8px;
-  color: #EEEEEE;
-  border-color: #0e0e0e;
+  border: 1px solid #0e0e0e;
   border-top-color: #0f0f0f;
   border-left-color: #0e0e0e;
   border-right-color: #0e0e0e;
-  background-color: #111111; }
+  color: #EEEEEE;
+  background-color: #111111;
+  background-image: none;
+  box-shadow: none; }
   .osd button:hover, button.osd:hover {
     color: #EEEEEE;
     background-color: #131313; }
@@ -264,7 +264,9 @@ window.aboutdialog image.large-icons {
     border-color: transparent;
     border-radius: 8px;
     color: #EEEEEE;
-    background-color: transparent; }
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none; }
     .osd toolbar button:hover, toolbar.osd button:hover {
       border-color: #0e0e0e;
       border-top-color: #0f0f0f;
@@ -444,15 +446,15 @@ editablelabel > stack > text > selection {
 
 button {
   padding: 4px 8px;
-  border-style: solid;
-  border-width: 1px;
   border-radius: 8px;
-  color: #000000;
-  border-color: #d3d5d9;
+  border: 1px solid #d3d5d9;
   border-top-color: #e9ebed;
   border-left-color: #dee0e3;
   border-right-color: #dee0e3;
-  background-color: #F9F9F9; }
+  color: #000000;
+  background-color: #F9F9F9;
+  background-image: none;
+  box-shadow: none; }
   button:hover {
     color: #000000;
     background-color: white; }
@@ -470,7 +472,9 @@ button {
     border-color: transparent;
     border-radius: 8px;
     color: #000000;
-    background-color: transparent; }
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none; }
     button.flat:hover {
       border-color: #d3d5d9;
       border-top-color: #e9ebed;
@@ -488,10 +492,8 @@ button {
       background-color: transparent; }
 
 button.destructive-action {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #be2738;
   border-radius: 8px;
+  border: 1px solid #be2738;
   color: #f8e5e7;
   background-color: #ED3146; }
   button.destructive-action:hover {
@@ -506,10 +508,8 @@ button.destructive-action {
     background-color: #ed6979; }
 
 button.suggested-action {
-  border-width: 1px;
-  border-style: solid;
   border-radius: 8px;
-  border-color: #48B259;
+  border: 1px solid #48B259;
   color: #F9F9F9;
   background-color: #48B259; }
   button.suggested-action:active, button.suggested-action:checked {
@@ -651,7 +651,9 @@ toolbar {
     border-color: transparent;
     border-radius: 8px;
     color: #000000;
-    background-color: transparent; }
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none; }
     toolbar button.flat:hover {
       border-color: #d3d5d9;
       border-top-color: #e9ebed;
@@ -787,7 +789,9 @@ headerbar {
     border-color: transparent;
     border-radius: 8px;
     color: #EEEEEE;
-    background-color: transparent; }
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none; }
     headerbar button:hover {
       border-color: #303030;
       border-top-color: #343434;
@@ -2359,7 +2363,9 @@ menubutton arrow {
   border-color: transparent;
   border-radius: 8px;
   color: #000000;
-  background-color: transparent; }
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none; }
   .toolbar > button:hover,
   .toolbar > :not(.linked) > button:hover,
   .toolbar :not(.linked) > menubutton > button:hover,
