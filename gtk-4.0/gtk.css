@@ -550,39 +550,6 @@ button.suggested-action {
   button.suggested-action:backdrop {
     color: #3c3c3c; }
 
-modelbutton {
-  min-height: 20px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border: none;
-  border-radius: 0px;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none; }
-  modelbutton:hover {
-    color: #F9F9F9;
-    background-color: #D44D1F; }
-  modelbutton:selected {
-    color: #F9F9F9;
-    background-color: #D44D1F; }
-  modelbutton:disabled {
-    color: #767778; }
-  modelbutton > image {
-    padding-right: 4px; }
-  modelbutton arrow {
-    background: none;
-    min-width: 16px;
-    min-height: 16px;
-    opacity: 0.3; }
-    modelbutton arrow:hover {
-      background: none; }
-    modelbutton arrow:disabled {
-      opacity: 0.15; }
-    modelbutton arrow.left {
-      -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
-    modelbutton arrow.right {
-      -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
-
 button.link,
 link {
   color: #19B6EE;
@@ -1012,7 +979,7 @@ columnview.view > header > button, treeview.view > header > button, columnview.v
   columnview.view > header > button:last-child, treeview.view > header > button:last-child {
     border-right-style: none; }
 
-popover.background {
+popover.background, popover.background:backdrop {
   font: initial;
   background-color: transparent; }
 
@@ -1020,12 +987,11 @@ popover > arrow,
 popover > contents {
   border: 1px solid #d3d5d9;
   color: #000000;
-  background-color: #ECEDEF;
+  background-color: #F9F9F9;
   background-clip: padding-box;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
+  box-shadow: none; }
 
 popover > contents {
-  padding: 8px;
   border-radius: 8px; }
   popover > contents > list,
   popover > contents > .view,
@@ -1042,19 +1008,52 @@ magnifier {
 
 popover.menu > contents {
   min-width: 120px;
-  border-radius: 8px;
-  border: 1px solid #d3d5d9;
-  color: #000000;
-  background-color: #F9F9F9; }
+  padding: 4px; }
 
 popover.menu box.inline-buttons {
   padding: 0px 4px; }
+
+popover.menu modelbutton {
+  min-height: 20px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border: none;
+  border-radius: 0px;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none; }
+  popover.menu modelbutton:hover, popover.menu modelbutton:selected {
+    color: #F9F9F9;
+    background-color: #D44D1F; }
+  popover.menu modelbutton:disabled {
+    color: #767778; }
+  popover.menu modelbutton > image {
+    padding-right: 4px; }
+  popover.menu modelbutton arrow {
+    background: none;
+    min-width: 16px;
+    min-height: 16px;
+    opacity: 0.3; }
+    popover.menu modelbutton arrow:hover {
+      background: none; }
+    popover.menu modelbutton arrow:disabled {
+      opacity: 0.15; }
+    popover.menu modelbutton arrow.left {
+      -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
+    popover.menu modelbutton arrow.right {
+      -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
 
 popover.menu separator {
   margin: 6px 0; }
 
 popover.menu list separator {
   margin: 0; }
+
+popover.menu popover.menu {
+  padding: 0 0 4px 0; }
+  popover.menu popover.menu > contents {
+    margin: 0;
+    border-radius: 8px; }
 
 popover.menu accelerator {
   color: alpha(currentColor, 0.55); }
@@ -1626,13 +1625,12 @@ listview row:backdrop {
   color: #4b4b4b; }
 
 listview row:selected {
-  border: none;
   color: #F9F9F9;
   background-color: #D44D1F; }
   listview row:selected:hover {
     background-color: #e34f1c; }
   listview row:selected:active {
-    background-color: #c54b22; }
+    background-color: #b74924; }
   listview row:selected:disabled {
     color: rgba(249, 249, 249, 0.7);
     background-color: #D44D1F; }
@@ -1750,35 +1748,37 @@ calendar {
   calendar > grid > label.day-number.other-month {
     color: alpha(currentColor, 0.3); }
 
-window.dialog.message {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
-  window.dialog.message .titlebar {
-    min-height: 20px;
-    background-image: none;
-    background-color: #ECEDEF;
-    border-style: none;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px; }
-  window.dialog.message box.dialog-vbox.vertical {
-    border-spacing: 10px; }
-  window.dialog.message label.title {
-    font-weight: 800;
-    font-size: 15pt; }
-  window.dialog.message.csd.background {
-    border-bottom-left-radius: 4px;
+window.dialog.message .titlebar {
+  min-height: 20px;
+  background-image: none;
+  background-color: #ECEDEF;
+  border-style: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+
+window.dialog.message box.dialog-vbox.vertical {
+  border-spacing: 10px; }
+
+window.dialog.message label.title {
+  font-weight: 800;
+  font-size: 15pt; }
+
+window.dialog.message.csd.background {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+
+window.dialog.message.csd .dialog-action-area button {
+  padding: 10px 14px;
+  border-radius: 0px;
+  border-left-style: solid;
+  border-right-style: none;
+  border-bottom-style: none;
+  background-image: none; }
+  window.dialog.message.csd .dialog-action-area button:first-child {
+    border-left-style: none;
+    border-bottom-left-radius: 4px; }
+  window.dialog.message.csd .dialog-action-area button:last-child {
     border-bottom-right-radius: 4px; }
-  window.dialog.message.csd .dialog-action-area button {
-    padding: 10px 14px;
-    border-radius: 0px;
-    border-left-style: solid;
-    border-right-style: none;
-    border-bottom-style: none;
-    background-image: none; }
-    window.dialog.message.csd .dialog-action-area button:first-child {
-      border-left-style: none;
-      border-bottom-left-radius: 4px; }
-    window.dialog.message.csd .dialog-action-area button:last-child {
-      border-bottom-right-radius: 4px; }
 
 .sidebar {
   background-color: #ECEDEF; }
