@@ -646,9 +646,6 @@ toolbar {
   toolbar:backdrop {
     color: #4b4b4b;
     background-color: #ECEDEF; }
-  toolbar:disabled {
-    color: #767778;
-    background-color: #e0e1e3; }
   toolbar button.flat {
     border-color: transparent;
     border-radius: 8px;
@@ -762,10 +759,12 @@ infobar .close {
     background-color: rgba(0, 0, 0, 0.05); }
 
 headerbar {
-  padding: 4px 8px;
   min-height: 30px;
+  padding: 4px 8px;
   color: #EEEEEE;
-  background-color: #111111; }
+  background-color: #111111;
+  background-image: none;
+  box-shadow: none; }
   headerbar:backdrop {
     color: rgba(238, 238, 238, 0.8); }
   .tiled headerbar, .tiled headerbar:backdrop, .maximized headerbar, .maximized headerbar:backdrop {
@@ -1684,13 +1683,11 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
     border-spacing: 12px; }
 
 .app-notification {
+  margin: 5px;
   border: 1px solid #d3d5d9;
-  background-color: #F9F9F9;
   color: #000000;
-  padding: 8px;
-  margin: 5px; }
-  .app-notification border {
-    border: none; }
+  background-color: #F9F9F9;
+  padding: 8px; }
 
 expander {
   min-width: 16px;
@@ -2107,7 +2104,7 @@ shortcut > .keycap {
   font-size: smaller; }
 
 stackswitcher > button.text-button {
-  min-width: 100px; }
+  min-width: 120px; }
 
 stackswitcher.circular {
   border-spacing: 12px; }
